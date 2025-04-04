@@ -87,7 +87,7 @@ export default function AboutPage() {
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
               <div className="flex justify-center gap-4">
                 <a href="/" className="hover:text-[#FF9F1C]">Home</a>
-                <a href="/faqs" className="hover:text-[#FF9F1C]">FAQs</a>
+                <a href="/faq" className="hover:text-[#FF9F1C]">FAQs</a>
                 <a href="/contactus" className="hover:text-[#FF9F1C]">Contact</a>
               </div>
             </div>
