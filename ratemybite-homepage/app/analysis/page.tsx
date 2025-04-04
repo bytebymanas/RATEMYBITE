@@ -46,7 +46,7 @@ export default function AnalysisPage() {
                 </a>
               </li>
               <li>
-                <a href="/reviews" className="text-[#264653] hover:text-[#E63946]">
+                <a href="/review" className="text-[#264653] hover:text-[#E63946]">
                   Reviews
                 </a>
               </li>

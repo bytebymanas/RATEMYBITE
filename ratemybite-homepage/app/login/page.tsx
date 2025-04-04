@@ -25,12 +25,12 @@ export default function LoginPage() {
                 </a>
               </li>
               <li>
-                <a href="/reviews" className="text-[#264653] hover:text-[#E63946]">
+                <a href="/review" className="text-[#264653] hover:text-[#E63946]">
                   Reviews
                 </a>
               </li>
               <li>
-                <a href="/analytics" className="text-[#264653] hover:text-[#E63946]">
+                <a href="/analysis" className="text-[#264653] hover:text-[#E63946]">
                   Analytics
                 </a>
               </li>
