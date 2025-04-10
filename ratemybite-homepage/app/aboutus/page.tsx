@@ -13,8 +13,7 @@ export default function AboutPage() {
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            {/* Replace with your actual logo if available */}
-            <img src="/logo.svg" alt="RateMyBite Logo" className="h-8 w-8" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils h-8 w-8 text-[#E63946]"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
             <span className="text-2xl font-bold text-[#E63946]">RateMyBite</span>
           </div>
           <nav>
@@ -25,12 +24,12 @@ export default function AboutPage() {
                 </a>
               </li>
               <li>
-                <a href="/reviews" className="text-[#264653] hover:text-[#E63946]">
+                <a href="/review" className="text-[#264653] hover:text-[#E63946]">
                   Reviews
                 </a>
               </li>
               <li>
-                <a href="/analytics" className="text-[#264653] hover:text-[#E63946]">
+                <a href="/analysis  " className="text-[#264653] hover:text-[#E63946]">
                   Analytics
                 </a>
               </li>

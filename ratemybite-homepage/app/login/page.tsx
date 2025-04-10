@@ -14,7 +14,7 @@ export default function LoginPage() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             {/* Replace with your actual logo if available */}
-            <img src="/logo.svg" alt="RateMyBite Logo" className="h-8 w-8" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils h-8 w-8 text-[#E63946]"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
             <span className="text-2xl font-bold text-[#E63946]">RateMyBite</span>
           </div>
           <nav>
@@ -96,9 +96,9 @@ export default function LoginPage() {
             <div className="w-full md:w-1/3 mb-6">
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
               <div className="flex justify-center gap-4">
-                <a href="/" className="hover:text-[#FF9F1C]">Home</a>
-                <a href="/faqs" className="hover:text-[#FF9F1C]">FAQs</a>
-                <a href="/contact" className="hover:text-[#FF9F1C]">Contact</a>
+                <a href="home" className="hover:text-[#FF9F1C]">Home</a>
+                <a href="/faq" className="hover:text-[#FF9F1C]">FAQs</a>
+                <a href="/contactus" className="hover:text-[#FF9F1C]">Contact</a>
               </div>
             </div>
             {/* Connect With Us */}

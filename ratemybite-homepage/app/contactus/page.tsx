@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { Utensils } from "lucide-react";
 
 export default function ContactUsPage() {
   const [messages, setMessages] = useState<
@@ -11,54 +13,44 @@ export default function ContactUsPage() {
   const handleSend = () => {
     if (!input.trim()) return;
     const userMessage = { sender: "user", text: input };
-    // For demo, bot responds with a default reply.
     const botReply = {
       sender: "bot",
       text: "Thanks for reaching out. We'll get back to you shortly!",
     };
-    // Explicitly type the updater function parameter.
-    setMessages(
-      (prev: { sender: "user" | "bot"; text: string }[]) => [
-        ...prev,
-        userMessage,
-        botReply,
-      ]
-    );
+    setMessages((prev) => [...prev, userMessage, botReply]);
     setInput("");
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF3E0] text-[#212121]">
+    <div className="min-h-screen flex flex-col bg-[#FAF3E0] text-[#212121]">
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <img src="/logo.svg" alt="RateMyBite Logo" className="h-8 w-8" />
-            <span className="text-2xl font-bold" style={{ color: "#E63946" }}>
-              RateMyBite
-            </span>
+            <Utensils className="h-8 w-8 text-[#E63946]" />
+            <span className="text-2xl font-bold text-[#E63946]">RateMyBite</span>
           </div>
           <nav>
             <ul className="flex space-x-4">
               <li>
-                <a href="/" className="text-[#264653] hover:text-[#E63946]">
+                <Link href="/" className="text-[#264653] hover:text-[#E63946]">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/reviews" className="text-[#264653] hover:text-[#E63946]">
+                <Link href="/review" className="text-[#264653] hover:text-[#E63946]">
                   Reviews
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/analysis" className="text-[#264653] hover:text-[#E63946]">
+                <Link href="/analysis" className="text-[#264653] hover:text-[#E63946]">
                   Analytics
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/login" className="text-[#264653] hover:text-[#E63946]">
+                <Link href="/login" className="text-[#264653] hover:text-[#E63946]">
                   Login
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -66,18 +58,14 @@ export default function ContactUsPage() {
       </header>
 
       {/* Main Content */}
-      <div className="container mx-auto p-8 max-w-4xl">
-        <h1
-          className="text-5xl font-extrabold text-center mb-6"
-          style={{ color: "#E63946" }}
-        >
+      <main className="container mx-auto p-8 max-w-4xl flex-grow">
+        <h1 className="text-5xl font-extrabold text-center mb-6 text-[#E63946]">
           Contact Us
         </h1>
         <p className="text-center text-lg mb-8">
           Have a query or feedback? Chat with us below!
         </p>
         <div className="flex flex-col md:flex-row gap-8">
-          {/* Chatbot UI */}
           <div className="w-full md:w-1/2 bg-white rounded-lg shadow-lg p-6 flex flex-col">
             <div className="flex-1 overflow-y-auto mb-4 border border-gray-200 rounded p-4">
               {messages.map((msg, idx) => (
@@ -111,24 +99,13 @@ export default function ContactUsPage() {
               </button>
             </div>
           </div>
-
-          {/* Chatbot Illustration */}
-          <div className="w-full md:w-1/2 flex items-center justify-center">
-            <img
-              src="/chatbot.png" // Ensure this file is in your public folder (public/chatbot.png)
-              alt="Chatbot Illustration"
-              className="max-w-full rounded shadow-lg"
-            />
-          </div>
         </div>
 
-        {/* Ribbon placed below main content */}
-        <div className="bg-[#FF9F1C] text-white py-2 mt-8">
-          <div className="container mx-auto text-center text-lg font-semibold">
-            Contact & Support
-          </div>
+        {/* Ribbon */}
+        <div className="bg-[#FF9F1C] text-white py-2 mt-8 text-center text-lg font-semibold">
+          Contact & Support
         </div>
-      </div>
+      </main>
 
       {/* Footer */}
       <footer className="bg-[#264653] text-white py-8">
@@ -143,15 +120,15 @@ export default function ContactUsPage() {
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
               <div className="flex justify-center gap-4">
-                <a href="/aboutus" className="hover:text-[#FF9F1C]">
+                <Link href="/aboutus" className="hover:text-[#FF9F1C]">
                   About Us
-                </a>
-                <a href="/faq" className="hover:text-[#FF9F1C]">
+                </Link>
+                <Link href="/faq" className="hover:text-[#FF9F1C]">
                   FAQs
-                </a>
-                <a href="/contactus" className="hover:text-[#FF9F1C]">
+                </Link>
+                <Link href="/contactus" className="hover:text-[#FF9F1C]">
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
             <div className="w-full md:w-1/3">
